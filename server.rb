@@ -13,7 +13,7 @@ get '/dice_roll' do
 end
 
 get '/magic8ball/will%20it%20snow%20tomorrow' do
-  magic = [
+magic = [
     "It is certain",
     "It is decidedly so",
     "Without a doubt",
@@ -48,6 +48,6 @@ get '/rps/rock' do
   elsif comp_choice == "scissors"
     score = "win"
   end
-  string = "The computer chose "+comp_choice+ ". You "+score+"!"
+  string = "The computer chose #{comp_choice}. You #{score}!"
   erb(:index, locals:{msg:string})
 end
